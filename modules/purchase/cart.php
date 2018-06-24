@@ -4,7 +4,7 @@ if (!defined('FLUX_ROOT')) exit;
 $this->loginRequired();
 
 if ($server->cart->isEmpty()) {
-	$session->setMessageData('Your cart is currently empty.');
+	$session->setMessageData('你的购物车没有物品。');
 	$this->redirect($this->url('purchase'));
 }
 

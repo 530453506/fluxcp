@@ -6,10 +6,10 @@ $this->loginRequired();
 require_once 'Flux/ItemShop.php';
 
 if ($server->cart && $server->cart->clear()) {
-	$session->setMessageData("Your cart has been emptied.");
+	$session->setMessageData("购物车清空完毕。");
 }
 else {
-	$session->setMessageData("Couldn't empty your cart, maybe it's already empty.");
+	$session->setMessageData("无法清空购物车，本来就是空的。");
 }
 
 $this->redirect($this->url('purchase'));

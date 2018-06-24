@@ -49,7 +49,7 @@ return array(
 			'cart'     => AccountLevel::NORMAL,
 			'changepass' => AccountLevel::NORMAL,
 			'edit'       => AccountLevel::ADMIN,
-			'changesex'  => AccountLevel::NORMAL,
+			'changesex'  => AccountLevel::ADMIN,
 			'confirm'    => AccountLevel::UNAUTH,
 			'resend'     => AccountLevel::UNAUTH,
 			'resetpass'  => AccountLevel::UNAUTH,

@@ -53,7 +53,7 @@ return array(
 		'CharMapServers' => array(
 			array(
 				'ServerName'      => 'FluxRO',
-				'Renewal'         => true,
+				'Renewal'         => false,
 				'MaxCharSlots'    => 9,
 				'DateTimezone'    => null, // Specifies game server's timezone for this char/map pair. (See: http://php.net/timezones)
 				//'ResetDenyMaps'   => 'sec_pri', // Defaults to 'sec_pri'. This value can be an array of map names.

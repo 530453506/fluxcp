@@ -260,7 +260,7 @@ try {
 	$col .= "IFNULL(price_sell, FLOOR(price_buy/2)) AS price_sell, view, ";
 	$col .= ($server->isRenewal) ? "`atk:matk` AS attack" : "attack";
 	
-	$sql  = $paginator->getSQL("SELECT $col FROM $tableName $sqlpartial GROUP BY items.id");
+	$sql  = $paginator->getSQL("SELECT $col FROM $tableName $sqlpartial");
 	$sth  = $server->connection->getStatement($sql);
 	
 	$sth->execute($bind);
