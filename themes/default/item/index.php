@@ -144,9 +144,9 @@
 		<th colspan="2"><?php echo $paginator->sortableColumn('name', 'Name') ?></th>
 		<th>Type</th>
 		<th>Equip Locations</th>
-		<th><?php echo $paginator->sortableColumn('price_buy', 'NPC Buy') ?></th>
-		<th><?php echo $paginator->sortableColumn('price_sell', 'NPC Sell') ?></th>
-		<th><?php echo $paginator->sortableColumn('weight', 'Weight') ?></th>
+<!--		<th>--><?php //echo $paginator->sortableColumn('price_buy', 'NPC Buy') ?><!--</th>-->
+<!--		<th>--><?php //echo $paginator->sortableColumn('price_sell', 'NPC Sell') ?><!--</th>-->
+<!--		<th>--><?php //echo $paginator->sortableColumn('weight', 'Weight') ?><!--</th>-->
 		<th><?php echo $paginator->sortableColumn('attack', 'Attack') ?></th>
 		<?php if($server->isRenewal): ?>
 		<th><?php echo $paginator->sortableColumn('matk', 'MATK') ?></th>
@@ -154,9 +154,9 @@
 		<th><?php echo $paginator->sortableColumn('defense', 'Defense') ?></th>
 		<th><?php echo $paginator->sortableColumn('range', 'Range') ?></th>
 		<th><?php echo $paginator->sortableColumn('slots', 'Slots') ?></th>
-		<th><?php echo $paginator->sortableColumn('refineable', 'Refineable') ?></th>
+<!--		<th>--><?php //echo $paginator->sortableColumn('refineable', 'Refineable') ?><!--</th>-->
 		<th><?php echo $paginator->sortableColumn('cost', 'For Sale') ?></th>
-		<th><?php echo $paginator->sortableColumn('origin_table', 'Custom') ?></th>
+<!--		<th>--><?php //echo $paginator->sortableColumn('origin_table', 'Custom') ?><!--</th>-->
 	</tr>
 	<?php foreach ($items as $item): ?>
 	<tr>
@@ -187,9 +187,9 @@
 				<span class="not-applicable">Unknown<?php echo " (".$item->equip_locations.")" ?></span>
 			<?php endif ?>
 		</td>
-		<td><?php echo number_format((int)$item->price_buy) ?></td>
-		<td><?php echo number_format((int)$item->price_sell) ?></td>
-		<td><?php echo round($item->weight, 1) ?></td>
+<!--		<td>--><?php //echo number_format((int)$item->price_buy) ?><!--</td>-->
+<!--		<td>--><?php //echo number_format((int)$item->price_sell) ?><!--</td>-->
+<!--		<td>--><?php //echo round($item->weight, 1) ?><!--</td>-->
 		<td><?php echo number_format((int)$item->attack) ?></td>
 		<?php if($server->isRenewal): ?>
 			<td><?php echo number_format((int)$item->matk) ?></td>
@@ -197,13 +197,13 @@
 		<td><?php echo number_format((int)$item->defense) ?></td>
 		<td><?php echo number_format((int)$item->range) ?></td>
 		<td><?php echo number_format((int)$item->slots) ?></td>
-		<td>
-			<?php if ($item->refineable): ?>
-				<span class="refineable yes">Yes</span>
-			<?php else: ?>
-				<span class="refineable no">No</span>
-			<?php endif ?>
-		</td>
+<!--		<td>-->
+<!--			--><?php //if ($item->refineable): ?>
+<!--				<span class="refineable yes">Yes</span>-->
+<!--			--><?php //else: ?>
+<!--				<span class="refineable no">No</span>-->
+<!--			--><?php //endif ?>
+<!--		</td>-->
 		<td>
 			<?php if ($item->cost): ?>
 				<span class="for-sale yes"><a href="<?php echo $this->url('purchase') ?>" title="Go to Item Shop">Yes</a></span>
@@ -211,13 +211,13 @@
 				<span class="for-sale no">No</span>
 			<?php endif ?>
 		</td>
-		<td>
-			<?php if (preg_match('/item_db2$/', $item->origin_table)): ?>
-				Yes
-			<?php else: ?>
-				No
-			<?php endif ?>
-		</td>
+<!--		<td>-->
+<!--			--><?php //if (preg_match('/item_db2$/', $item->origin_table)): ?>
+<!--				Yes-->
+<!--			--><?php //else: ?>
+<!--				No-->
+<!--			--><?php //endif ?>
+<!--		</td>-->
 	</tr>
 	<?php endforeach ?>
 </table>

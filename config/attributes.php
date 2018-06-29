@@ -1,9 +1,9 @@
 <?php
 // rA attributes.
 return array(
-	1 => 'Ice',
-	2 => 'Earth',
-	3 => 'Fire',
-	4 => 'Wind',
+	1 => '冰',
+	2 => '地',
+	3 => '火',
+	4 => '风',
 );
 ?>

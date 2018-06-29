@@ -88,6 +88,24 @@ if (($preferred_theme = $params->get('preferred_theme'))) {
 // Preferred server.
 $server = $session->getAthenaServer();
 
+require_once('modules/server/status.php');
+require_once('functions.php');
+
+$serverNames = $this->getServerNames();
+$serverName = $serverNames[0];
+reset($serverStatus[$serverName]);
+$mapServerName = key($serverStatus[$serverName]);
+
+$onlinePlayersCount = getOnlineCount($serverName, $mapServerName, $serverStatus);
+$serverOnline = getServerStatus($serverName, $mapServerName, $serverStatus);
+$woeUp = getWoeStatus($session->getAthenaServer());
+
+// Need recaptcha to login ?
+if (Flux::config('UseLoginCaptcha') && Flux::config('EnableReCaptcha') && !$session->isLoggedIn()) {
+	require_once 'recaptcha/recaptchalib.php';
+	$recaptcha = recaptcha_get_html(Flux::config('ReCaptchaPublicKey'));
+}
+
 // WoE-based authorization.
 $_thisModule = $params->get('module');
 $_thisAction = $params->get('action');

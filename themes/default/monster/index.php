@@ -78,18 +78,18 @@
 <?php echo $paginator->infoText() ?>
 <table class="horizontal-table">
 	<tr>
-		<th><?php echo $paginator->sortableColumn('monster_id', 'Monster ID') ?></th>
-		<th><?php echo $paginator->sortableColumn('kro_name', 'kRO Name') ?></th>
-		<th><?php echo $paginator->sortableColumn('iro_name', 'iRO Name') ?></th>
-		<th><?php echo $paginator->sortableColumn('level', 'Level') ?></th>
+		<th><?php echo $paginator->sortableColumn('monster_id', 'ID') ?></th>
+		<th><?php echo $paginator->sortableColumn('kro_name', '中文名') ?></th>
+		<th><?php echo $paginator->sortableColumn('iro_name', '英文名') ?></th>
+		<th><?php echo $paginator->sortableColumn('level', '等级') ?></th>
 		<th><?php echo $paginator->sortableColumn('hp', 'HP') ?></th>
-		<th><?php echo $paginator->sortableColumn('size', 'Size') ?></th>
-		<th><?php echo $paginator->sortableColumn('race', 'Race') ?></th>
-		<th>Element</th>
-		<th><?php echo $paginator->sortableColumn('exp', 'Base EXP') ?></th>
-		<th><?php echo $paginator->sortableColumn('jexp', 'Job EXP') ?></th>
-		<th><?php echo $paginator->sortableColumn('dropcard_id', 'Card ID') ?></th>
-		<th><?php echo $paginator->sortableColumn('origin_table', 'Custom') ?></th>
+		<th><?php echo $paginator->sortableColumn('size', '体型') ?></th>
+		<th><?php echo $paginator->sortableColumn('race', '种族') ?></th>
+		<th>属性</th>
+<!--		<th>--><?php //echo $paginator->sortableColumn('exp', 'Base EXP') ?><!--</th>-->
+<!--		<th>--><?php //echo $paginator->sortableColumn('jexp', 'Job EXP') ?><!--</th>-->
+		<th><?php echo $paginator->sortableColumn('dropcard_id', '卡片 ID') ?></th>
+<!--		<th>--><?php //echo $paginator->sortableColumn('origin_table', 'Custom') ?><!--</th>-->
 	</tr>
 	<?php foreach ($monsters as $monster): ?>
 	<tr>
@@ -124,8 +124,8 @@
 			<?php endif ?>
 		</td>
 		<td><?php echo Flux::elementName($monster->element_type) ?> (Lv <?php echo floor($monster->element_level) ?>)</td>
-		<td><?php echo number_format($monster->exp * $server->expRates['Base'] / 100) ?></td>
-		<td><?php echo number_format($monster->jexp * $server->expRates['Job'] / 100) ?></td>
+<!--		<td>--><?php //echo number_format($monster->exp * $server->expRates['Base'] / 100) ?><!--</td>-->
+<!--		<td>--><?php //echo number_format($monster->jexp * $server->expRates['Job'] / 100) ?><!--</td>-->
 		<?php if ($monster->dropcard_id): ?>
 			<td>
 				<?php if ($auth->actionAllowed('item', 'view')): ?>
@@ -137,13 +137,13 @@
 		<?php else: ?>
 			<td><span class="not-applicable">None</span></td>
 		<?php endif ?>
-		<td>
-			<?php if (preg_match('/mob_db2$/', $monster->origin_table)): ?>
-				Yes
-			<?php else: ?>
-				No
-			<?php endif ?>
-		</td>
+<!--		<td>-->
+<!--			--><?php //if (preg_match('/mob_db2$/', $monster->origin_table)): ?>
+<!--				Yes-->
+<!--			--><?php //else: ?>
+<!--				No-->
+<!--			--><?php //endif ?>
+<!--		</td>-->
 	</tr>
 	<?php endforeach ?>
 </table>
