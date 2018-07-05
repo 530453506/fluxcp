@@ -9,36 +9,36 @@
 </h3>
 <table class="vertical-table">
 	<tr>
-		<th>Monster ID</th>
+		<th>魔物 ID</th>
 		<td><?php echo $monster->monster_id ?></td>
 		<?php if ($image=$this->monsterImage($monster->monster_id)): ?>
 		<td rowspan="12" style="width:150px; text-align: center; vertical-alignment: middle">
 			<img src="<?php echo $image ?>" />
 		</td>
 		<?php endif ?>
-		<th>Sprite</th>
+		<th>大写名</th>
 		<td><?php echo htmlspecialchars($monster->sprite) ?></td>
 	</tr>
 	<tr>
-		<th>kRO Name</th>
+		<th>中文名</th>
 		<td><?php echo htmlspecialchars($monster->kro_name) ?></td>
-		<th>Custom</th>
+		<th>魔物类型</th>
 		<td>
 			<?php if (preg_match('/mob_db2$/', $monster->origin_table)): ?>
-				Yes
+				特色
 			<?php else: ?>
-				No
+				官方
 			<?php endif ?>
 		</td>
 	</tr>
 	<tr>
-		<th>iRO Name</th>
+		<th>英文名</th>
 		<td><?php echo htmlspecialchars($monster->iro_name) ?></td>
 		<th>HP</th>
 		<td><?php echo number_format($monster->hp) ?></td>
 	</tr>
 	<tr>
-		<th>Size</th>
+		<th>体型</th>
 		<td>
 			<?php if ($size=Flux::monsterSizeName($monster->size)): ?>
 				<?php echo htmlspecialchars($size) ?>
@@ -50,7 +50,7 @@
 		<td><?php echo number_format($monster->sp) ?></td>
 	</tr>
 	<tr>
-		<th>Race</th>
+		<th>种族</th>
 		<td>
 			<?php if ($race=Flux::monsterRaceName($monster->race)): ?>
 				<?php echo htmlspecialchars($race) ?>
@@ -58,53 +58,53 @@
 				<span class="not-applicable">Unknown</span>
 			<?php endif ?>	
 		</td>
-		<th>Level</th>
+		<th>等级</th>
 		<td><?php echo number_format($monster->level) ?></td>
 	</tr>
 	<tr>
-		<th>Element</th>
+		<th>属性</th>
 		<td><?php echo Flux::elementName($monster->element_type) ?> (Lv <?php echo floor($monster->element_level) ?>)</td>
-		<th>Speed</th>
+		<th>移动速度</th>
 		<td><?php echo number_format($monster->speed) ?></td>
 	</tr>
 	<tr>
-		<th>Experience</th>
+		<th>基本经验值</th>
 		<td><?php echo number_format($monster->base_exp) ?></td>
-		<th>Attack</th>
+		<th>攻击力</th>
 		<td><?php echo number_format($monster->attack1) ?>~<?php echo number_format($monster->attack2) ?></td>
 	</tr>
 	<tr>
-		<th>Job Experience</th>
+		<th>Job 经验值</th>
 		<td><?php echo number_format($monster->job_exp) ?></td>
-		<th>Defense</th>
+		<th>防御力</th>
 		<td><?php echo number_format($monster->defense) ?></td>
 	</tr>
 	<tr>
-		<th>MVP Experience</th>
+		<th>MVP 经验值</th>
 		<td><?php echo number_format($monster->mvp_exp) ?></td>
-		<th>Magic Defense</th>
+		<th>魔法防御</th>
 		<td><?php echo number_format($monster->magic_defense) ?></td>
 	</tr>
 	<tr>
-		<th>Attack Delay</th>
+		<th>攻击延迟</th>
 		<td><?php echo number_format($monster->attack_delay) ?> ms</td>
-		<th>Attack Range</th>
+		<th>攻击距离</th>
 		<td><?php echo number_format($monster->range1) ?></td>
 	</tr>
 	<tr>
-		<th>Attack Motion</th>
+		<th>攻击后移动延迟</th>
 		<td><?php echo number_format($monster->attack_motion) ?> ms</td>
-		<th>Spell Range</th>
+		<th>魔法范围</th>
 		<td><?php echo number_format($monster->range2) ?></td>
 	</tr>
 	<tr>
-		<th>Delay Motion</th>
+		<th>移动后延迟</th>
 		<td><?php echo number_format($monster->defense_motion) ?> ms</td>
-		<th>Vision Range</th>
+		<th>视线范围</th>
 		<td><?php echo number_format($monster->range3) ?></td>
 	</tr>
 	<tr>
-		<th>Monster Mode</th>
+		<th>特性说明</th>
 		<td colspan="<?php echo $image ? 4 : 3 ?>">
 			<ul class="monster-mode">
 			<?php foreach ($this->monsterMode($monster->mode) as $mode): ?>
@@ -114,7 +114,7 @@
 		</td>
 	</tr>
 	<tr>
-		<th>Monster Stats</th>
+		<th>魔物属性</th>
 		<td colspan="<?php echo $image ? 4 : 3 ?>">
 			<table class="character-stats">
 				<tr>
@@ -138,13 +138,13 @@
 	</tr>
 </table>
 
-<h3><?php echo htmlspecialchars($monster->iro_name) ?> Item Drops</h3>
+<h3><?php echo htmlspecialchars($monster->iro_name) ?> 掉落物品</h3>
 <?php if ($itemDrops): ?>
 <table class="vertical-table">
 	<tr>
-		<th>Item ID</th>
-		<th colspan="2">Item Name</th>
-		<th>Drop Chance</th>
+		<th>物品 ID</th>
+		<th colspan="2">物品名称</th>
+		<th>掉落几率</th>
 	</tr>
 	<?php $mvpDrops = 0; ?>
 	<?php foreach ($itemDrops as $itemDrop): ?>
@@ -187,42 +187,42 @@
 	<?php endif ?>
 </table>
 <?php else: ?>
-<p>No item drops found for <?php echo htmlspecialchars($monster->iro_name) ?>.</p>
+<p><?php echo htmlspecialchars($monster->iro_name) ?> 没有掉落物品</p>
 <?php endif ?>
 
-<h3>Monster Skills for “<?php echo htmlspecialchars($monster->iro_name) ?>”</h3>
+<h3><?php echo htmlspecialchars($monster->iro_name) ?> 魔物技能</h3>
 <?php if ($mobSkills): ?>
 <table class="vertical-table">
 	<tr>
-		<th>Name</th>
-		<th>Level</th>
-		<th>State</th>
-		<th>Rate</th>
-		<th>Cast Time</th>
-		<th>Delay</th>
-		<th>Cancelable</th>
-		<th>Target</th>
-		<th>Condition</th>
-		<th>Value</th>
-	</tr>	
+		<th>技能名称</th>
+		<th>技能等级</th>
+<!--		<th>State</th>-->
+<!--		<th>Rate</th>-->
+<!--		<th>Cast Time</th>-->
+<!--		<th>Delay</th>-->
+<!--		<th>Cancelable</th>-->
+<!--		<th>Target</th>-->
+<!--		<th>Condition</th>-->
+<!--		<th>Value</th>-->
+	</tr>
 	<?php foreach ($mobSkills as $skill): ?>
 	<tr>
 		<td><?php echo htmlspecialchars($skill->INFO) ?></td>
 		<td><?php echo htmlspecialchars($skill->SKILL_LV) ?></td>
-		<td><?php echo htmlspecialchars(ucfirst($skill->STATE)) ?></td>
-		<td><?php echo $skill->RATE/100 ?>%</td>
-		<td><?php echo $skill->CASTTIME/1000 ?>s</td>
-		<td><?php echo $skill->DELAY/1000 ?>s</td>
-		<td><?php echo htmlspecialchars(ucfirst($skill->CANCELABLE)) ?></td>
-		<td><?php echo htmlspecialchars(ucfirst($skill->TARGET)) ?></td>
-		<td><em><?php echo htmlspecialchars($skill->CONDITION) ?></em></td>
-		<td>
-			<?php if (!is_null($skill->CONDITION_VALUE) && trim($skill->CONDITION_VALUE) !== ''): ?>
-				<?php echo htmlspecialchars($skill->CONDITION_VALUE) ?>
-			<?php else: ?>
-				<span class="not-applicable">None</span>
-			<?php endif ?>
-		</td>
+<!--		<td>--><?php //echo htmlspecialchars(ucfirst($skill->STATE)) ?><!--</td>-->
+<!--		<td>--><?php //echo $skill->RATE/100 ?><!--%</td>-->
+<!--		<td>--><?php //echo $skill->CASTTIME/1000 ?><!--s</td>-->
+<!--		<td>--><?php //echo $skill->DELAY/1000 ?><!--s</td>-->
+<!--		<td>--><?php //echo htmlspecialchars(ucfirst($skill->CANCELABLE)) ?><!--</td>-->
+<!--		<td>--><?php //echo htmlspecialchars(ucfirst($skill->TARGET)) ?><!--</td>-->
+<!--		<td><em>--><?php //echo htmlspecialchars($skill->CONDITION) ?><!--</em></td>-->
+<!--		<td>-->
+<!--			--><?php //if (!is_null($skill->CONDITION_VALUE) && trim($skill->CONDITION_VALUE) !== ''): ?>
+<!--				--><?php //echo htmlspecialchars($skill->CONDITION_VALUE) ?>
+<!--			--><?php //else: ?>
+<!--				<span class="not-applicable">None</span>-->
+<!--			--><?php //endif ?>
+<!--		</td>-->
 	</tr>
 	<?php endforeach ?>
 </table>
