@@ -1,5 +1,5 @@
 <?php if (!defined('FLUX_ROOT')) exit; ?>
-<h2>Viewing Monster</h2>
+<h2>魔物资料</h2>
 <?php if ($monster): ?>
 <h3>
 	#<?php echo $monster->monster_id ?>: <?php echo htmlspecialchars($monster->iro_name) ?>

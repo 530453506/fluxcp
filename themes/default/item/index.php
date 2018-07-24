@@ -140,22 +140,22 @@
 <?php echo $paginator->infoText() ?>
 <table class="horizontal-table">
 	<tr>
-		<th><?php echo $paginator->sortableColumn('item_id', 'Item ID') ?></th>
-		<th colspan="2"><?php echo $paginator->sortableColumn('name', 'Name') ?></th>
-		<th>Type</th>
-		<th>Equip Locations</th>
+		<th><?php echo $paginator->sortableColumn('item_id', 'ID') ?></th>
+		<th colspan="2"><?php echo $paginator->sortableColumn('name', '名称') ?></th>
+		<th>类型</th>
+		<th>装备位置</th>
 <!--		<th>--><?php //echo $paginator->sortableColumn('price_buy', 'NPC Buy') ?><!--</th>-->
 <!--		<th>--><?php //echo $paginator->sortableColumn('price_sell', 'NPC Sell') ?><!--</th>-->
 <!--		<th>--><?php //echo $paginator->sortableColumn('weight', 'Weight') ?><!--</th>-->
-		<th><?php echo $paginator->sortableColumn('attack', 'Attack') ?></th>
+		<th><?php echo $paginator->sortableColumn('attack', '攻击力') ?></th>
 		<?php if($server->isRenewal): ?>
 		<th><?php echo $paginator->sortableColumn('matk', 'MATK') ?></th>
 		<?php endif ?>
-		<th><?php echo $paginator->sortableColumn('defense', 'Defense') ?></th>
-		<th><?php echo $paginator->sortableColumn('range', 'Range') ?></th>
-		<th><?php echo $paginator->sortableColumn('slots', 'Slots') ?></th>
+		<th><?php echo $paginator->sortableColumn('defense', '防御力') ?></th>
+		<th><?php echo $paginator->sortableColumn('range', '射程') ?></th>
+		<th><?php echo $paginator->sortableColumn('slots', '洞数') ?></th>
 <!--		<th>--><?php //echo $paginator->sortableColumn('refineable', 'Refineable') ?><!--</th>-->
-		<th><?php echo $paginator->sortableColumn('cost', 'For Sale') ?></th>
+		<th><?php echo $paginator->sortableColumn('cost', '是否售卖') ?></th>
 <!--		<th>--><?php //echo $paginator->sortableColumn('origin_table', 'Custom') ?><!--</th>-->
 	</tr>
 	<?php foreach ($items as $item): ?>
@@ -206,7 +206,7 @@
 <!--		</td>-->
 		<td>
 			<?php if ($item->cost): ?>
-				<span class="for-sale yes"><a href="<?php echo $this->url('purchase') ?>" title="Go to Item Shop">Yes</a></span>
+				<span class="for-sale yes"><a href="<?php echo $this->url('purchase') ?>" title="前往商店购买">Yes</a></span>
 			<?php else: ?>
 				<span class="for-sale no">No</span>
 			<?php endif ?>

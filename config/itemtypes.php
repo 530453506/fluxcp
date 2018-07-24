@@ -1,18 +1,18 @@
 <?php
 return array(
-	0 => 'Healing',
+	0 => '治愈道具',
 	//1 => 'Unknown',
-	2 => 'Usable',
-	3 => 'Etc',
-	4 => 'Armor',
-	5 => 'Weapon',
-	6 => 'Card',
-	7 => 'Pet Egg',
-	8 => 'Pet Armor',
+	2 => '可使用道具',
+	3 => '其他类型道具',
+	4 => '防具',
+	5 => '武器',
+	6 => '卡片',
+	7 => '宠物蛋',
+	8 => '宠物装备',
 	//9 => 'Unknown2',
-	10 => 'Ammo',
-	11 => 'Delay Consume',
-	12 => 'Shadow Equipment',
-	18 => 'Cash Shop Reward'
+	10 => '弹药',
+	11 => '延迟消耗品',
+	12 => '影子装备',
+	18 => '商城道具'
 )
 ?>

@@ -1,6 +1,6 @@
 <?php
 return array(
-    'P' => 'Pet',
-    'H' => 'Homunculus',
-    'O' => 'Other',
+    'P' => '宠物',
+    'H' => '人工生命体',
+    'O' => '其他',
 );

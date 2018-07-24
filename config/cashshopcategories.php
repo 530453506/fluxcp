@@ -6,14 +6,14 @@
 // Keep in mind that different texture files will display different categories in-game.
 // These are the same used in rAthena's db files.
 return array(
-	0 => 'New',
-	1 => 'Hot',
-	2 => 'Limited',
-	3 => 'Rental',
-	4 => 'Gear',
-	5 => 'Buff',
-	6 => 'Heal',
-	7 => 'Other',
-	8 => 'Sale'
+	0 => '新品',
+	1 => '热销',
+	2 => '限购',
+	3 => '租赁物品',
+	4 => '装备',
+	5 => '增益',
+	6 => '补给',
+	7 => '其他',
+	8 => '打折'
 );
 ?>
