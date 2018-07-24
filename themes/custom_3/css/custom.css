@@ -1,0 +1,60 @@
+/* Custom page CSS
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+    background: #fff url(../img/bg.jpg) no-repeat center top;
+    background-size: cover;
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color:transparent !important;
+}
+
+body > .container {
+    background-color:white;
+  padding: 20px 15px 0;
+  padding-bottom: 21px;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+#footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+.navbar-inverse {
+    background-color: transparent;
+    border-color: #080808;
+
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color:#000;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+    color: #000;
+    background-color: transparent;
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+    color: #000;
+    background-color: transparent;
+}
+#submenu {
+    color: #000;
+}
