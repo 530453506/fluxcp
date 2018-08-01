@@ -15,7 +15,7 @@ return array(
 				// -- It specifies the encoding to convert your MySQL data to on the website (most likely needs to be utf8)
 			'Hostname'   => '127.0.0.1',
 			'Username'   => 'root',
-			'Password'   => 'itaskTour2006',
+			'Password'   => '*D19890129',
 			'Database'   => 'ragnarok',
 			'Persistent' => true,
 			'Timezone'   => null // Example: '+0:00' is UTC.
@@ -36,7 +36,7 @@ return array(
 				// -- It specifies the encoding to convert your MySQL data to on the website (most likely needs to be utf8)
 			'Hostname'   => '127.0.0.1',
 			'Username'   => 'root',
-			'Password'   => 'itaskTour2006',
+			'Password'   => '*D19890129',
 			'Database'   => 'log',
 			'Persistent' => true,
 			'Timezone'   => null // Possible values is as described in the comment in DbConfig.

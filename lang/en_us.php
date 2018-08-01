@@ -303,7 +303,7 @@ return array(
 	'TransferButton'          => 'Transfer',
 	'TransferNoCredits'       => '您的帐户没有任何点券.',
 	// - account/view
-	'VIPStateLabel'           => 'VIP Status',
+	'VIPStateLabel'           => '会员状态',
 	// * account/view submenus
 	'ModifyAccountLink'       => '修改帐户讯息',
 	'AccountViewTitle'        => '查看账号讯息',
@@ -707,7 +707,7 @@ return array(
 	'ServerStatusCharLabel'   => '角色服务器',
 	'ServerStatusMapLabel'    => '地图服务器',
 	'ServerStatusOnlineLabel' => '在线人數',
-	'ServerStatusPeakLabel'   => 'Player Peak',
+	'ServerStatusPeakLabel'   => '历史最高人数',
 	
 	// Module: service
 	// - service/tos

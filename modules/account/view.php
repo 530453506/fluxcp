@@ -69,7 +69,7 @@ $vipexpiretime = $account->vip_time;
 	$dt = new DateTime("@$vipexpiretime");
 	$vipexpires = 'Expires '.$dt->format('Y-m-d');
 } elseif ($account->vip_time == '0'){
-	$vipexpires = 'Standard Account';
+	$vipexpires = '普通账号';
 } else {$vipexpires = 'Unknown';}	
 
 if (count($_POST) && $account) {

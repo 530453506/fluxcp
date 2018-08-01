@@ -66,7 +66,7 @@ return array(
 			'changeslot'	=> AccountLevel::NORMAL,
 			'resetlook'		=> AccountLevel::NORMAL,
 			'resetpos'		=> AccountLevel::NORMAL,
-			'mapstats'		=> AccountLevel::ANYONE,
+			'mapstats'		=> AccountLevel::ADMIN,
 			'divorce'		=> AccountLevel::NORMAL
 		),
 		'guild'		=> array(
@@ -110,7 +110,7 @@ return array(
 		'server'	=> array(
 			'status'		=> AccountLevel::ANYONE,
 			'status-xml'	=> AccountLevel::ANYONE,
-			'info'			=> AccountLevel::ANYONE
+			'info'			=> AccountLevel::ADMIN
 		),
 		'logdata'	=> array(
 			'index'			=> AccountLevel::ADMIN,

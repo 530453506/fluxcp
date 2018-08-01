@@ -1223,10 +1223,10 @@ class Flux_Template {
 		}
 		
 		if (count($jobs) === count($equipJobs)) {
-			return array('All Jobs');
+			return array('所有职业');
 		}
 		else if (count($jobs) === count($equipJobs) - 1 && !in_array($equipJobs, $jobs)) {
-			return array('All Jobs Except Novice');
+			return array('初心者以外所有职业');
 		}
 		else {
 			return $jobs;

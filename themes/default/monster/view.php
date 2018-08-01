@@ -2,7 +2,7 @@
 <h2>魔物资料</h2>
 <?php if ($monster): ?>
 <h3>
-	#<?php echo $monster->monster_id ?>: <?php echo htmlspecialchars($monster->iro_name) ?>
+	#<?php echo $monster->monster_id ?>: <?php echo htmlspecialchars($monster->kro_name) ?>
 	<?php if ($monster->mvp_exp): ?>
 		<span class="mvp">(MVP)</span>
 	<?php endif ?>
@@ -138,7 +138,7 @@
 	</tr>
 </table>
 
-<h3><?php echo htmlspecialchars($monster->iro_name) ?> 掉落物品</h3>
+<h3><?php echo htmlspecialchars($monster->kro_name) ?> 掉落物品</h3>
 <?php if ($itemDrops): ?>
 <table class="vertical-table">
 	<tr>
@@ -187,10 +187,10 @@
 	<?php endif ?>
 </table>
 <?php else: ?>
-<p><?php echo htmlspecialchars($monster->iro_name) ?> 没有掉落物品</p>
+<p><?php echo htmlspecialchars($monster->kro_name) ?> 没有掉落物品</p>
 <?php endif ?>
 
-<h3><?php echo htmlspecialchars($monster->iro_name) ?> 魔物技能</h3>
+<h3><?php echo htmlspecialchars($monster->kro_name) ?> 魔物技能</h3>
 <?php if ($mobSkills): ?>
 <table class="vertical-table">
 	<tr>
@@ -227,9 +227,9 @@
 	<?php endforeach ?>
 </table>
 <?php else: ?>
-<p>No skills found for <?php echo htmlspecialchars($monster->iro_name) ?>.</p>
+<p><?php echo htmlspecialchars($monster->kro_name) ?> 没有技能.</p>
 <?php endif ?>
 
 <?php else: ?>
-<p>No such monster was found. <a href="javascript:history.go(-1)">Go back</a>.</p>
+<p>没有匹配到魔物. <a href="javascript:history.go(-1)">返回</a>.</p>
 <?php endif ?>

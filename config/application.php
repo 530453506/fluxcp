@@ -229,46 +229,46 @@ return array(
 	// not at any given time depends on the user's account group level and/or
 	// their login status.
 	'MenuItems'		=> array(
-		'MainMenuLabel'		=> array(
-			'HomeLabel'			=> array('module' => 'main'),
-			//'ForumLabel'		=> array('exturl' => 'http://www.fluxro.com/community'),	// External forum link
+		'主菜单'		=> array(
+			'主页'			=> array('module' => 'main'),
+			'前往论坛'		=> array('exturl' => 'http://www.fluxro.com/community'),	// External forum link
 			//'ForumLabel'		=> array('module' => 'forums'), 						// Built-in forum link
-			'NewsLabel'			=> array('module' => 'news'),
+			//'NewsLabel'			=> array('module' => 'news'),
 			// Sample items for pages function.
-			'DownloadsLabel'		=> array('module' => 'pages','action'=>'content&path=downloads'),
-			'RulesLabel'			=> array('module' => 'pages','action'=>'content&path=rules'),
+			'下载游戏'		=> array('module' => 'pages','action'=>'content&path=downloads'),
+			//'RulesLabel'			=> array('module' => 'pages','action'=>'content&path=rules'),
 			// End sample items for pages function.
 		),
-		'AccountLabel'		=> array(
-			'AccountCreateHeading'		=> array('module' => 'account', 'action' => 'create'),
-			'LoginTitle'			=> array('module' => 'account', 'action' => 'login'),
-			'MyAccountLabel'	=> array('module' => 'account', 'action' => 'view'),
-			'HistoryLabel'		=> array('module' => 'history'),
-			'ServiceDeskLabel'	=> array('module' => 'servicedesk'),
-			'LogoutTitle'		=> array('module' => 'account', 'action' => 'logout'),
+		'账号讯息'		=> array(
+			'注册'		=> array('module' => 'account', 'action' => 'create'),
+			'登录'			=> array('module' => 'account', 'action' => 'login'),
+			'账号详情'	=> array('module' => 'account', 'action' => 'view'),
+			'账号日志'		=> array('module' => 'history'),
+			'问题反馈'	=> array('module' => 'servicedesk'),
+			'登出'		=> array('module' => 'account', 'action' => 'logout'),
 		),
-		'DonationsLabel'		=> array(
-			'PurchaseLabel'		=> array('module' => 'purchase'),
-			'DonateLabel'		=> array('module' => 'donate'),
+		'赞助我们'		=> array(
+			'商城'		=> array('module' => 'purchase'),
+			'赞助'		=> array('module' => 'donate'),
 		),
-		'InformationLabel'	=> array(
+		'服务器讯息'	=> array(
 			'ServerInfoLabel'	=> array('module' => 'server', 'action' => 'info'),
-			'ServerStatusLabel'	=> array('module' => 'server', 'action' => 'status'),
-			'WoeHoursLabel'		=> array('module' => 'woe'),
-			'CastlesLabel'		=> array('module' => 'castle'),
-			'WhosOnlineLabel'	=> array('module' => 'character', 'action' => 'online'),
+			'服务器详情'	=> array('module' => 'server', 'action' => 'status'),
+			'GVG时间'		=> array('module' => 'woe'),
+			'城堡占领详情'		=> array('module' => 'castle'),
+			'在线详情'	=> array('module' => 'character', 'action' => 'online'),
 			'MapStaticsLabel'=> array('module' => 'character', 'action' => 'mapstats'),
-			'RankingInfoLabel'	=> array('module' => 'ranking', 'action' => 'character'),
-			'VendingInfoLabel'	=> array('module' => 'vending'),
-			'BuyingstoreInfoLabel'	=> array('module' => 'buyingstore'),
+			'排名详情'	=> array('module' => 'ranking', 'action' => 'character'),
+			'离线商店'	=> array('module' => 'vending'),
+			'采购商店'	=> array('module' => 'buyingstore'),
 		),
-		'DatabaseLabel'		=> array(
-			'ItemDatabaseLabel'	=> array('module' => 'item'),
-			'MobDatabaseLabel'	=> array('module' => 'monster'),
+		'数据库讯息'		=> array(
+			'物品搜寻'	=> array('module' => 'item'),
+			'魔物搜寻'	=> array('module' => 'monster'),
 		),
-		'SocialLabel'		=> array(
-			'JoinUsInFacebookLabel'	=> array('exturl' => 'https://www.facebook.com/<change_me>'),
-			'RateUsOnRMSLabel'		=> array('exturl' => '<link_to_RMS>'),
+		'QQ群号'		=> array(
+			'点击加入'	=> array('exturl' => 'https://www.facebook.com/<change_me>'),
+			//'RateUsOnRMSLabel'		=> array('exturl' => '<link_to_RMS>'),
 		),
 		'Service Desk'	=> array(
 			'ServiceDeskLabel'	=> array('module' => 'servicedesk', 'action' => 'staffindex'),
@@ -383,7 +383,7 @@ return array(
 			'add'			=> 'Add New Page',
 		),
 		'news'			=> array(
-			'index'			=> 'Latest News',
+			'index'			=> '最新通知',
 			'manage'			=> 'Manage',
 			'add'			=> 'Add News',
 		),

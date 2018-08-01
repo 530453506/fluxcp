@@ -2,8 +2,8 @@
 
 
 			<span style="display: inline-block; margin: 2px 2px 2px 0">
-				You are currently logged in as <strong><a href="<?php echo $this->url('account', 'view') ?>" title="View account"><?php echo htmlspecialchars($session->account->userid) ?></a></strong>
-				on <?php echo htmlspecialchars($session->serverName) ?>. <a href="?module=account&action=logout">Logout</a>
+                <strong><a href="<?php echo $this->url('account', 'view') ?>" title="账号信息"><?php echo htmlspecialchars($session->account->userid) ?></a></strong>
+				, 欢迎您 ^_^ ●ω● <a href="?module=account&action=logout" title="登出">注销</a>
 				
 			<?php if (count($athenaServerNames=$session->getAthenaServerNames()) > 1): ?>
 				Your preferred server is:
